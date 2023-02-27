@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:the_fridge/screens/login_screen.dart';
+import 'package:the_fridge/widgets/boards_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -43,10 +44,15 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {Get.to(const LoginScreen());}, 
-          child: const Text('Login screen')
-        ),
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {Get.to(const LoginScreen());}, 
+              child: const Text('Login screen')
+            ),
+            const BoardsView()
+          ],
+        )
       )
     );
   }
