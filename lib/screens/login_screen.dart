@@ -8,11 +8,12 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ElevatedButton(
-        onPressed: () {Get.to(const HomeScreen());}, 
-        child: const Text('Home screen')
-      ),
-      
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {Get.to(const HomeScreen());}, 
+          child: const Text('Home screen')
+        ),
+      )
     );
   }
 }
