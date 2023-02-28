@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:the_fridge/screens/login_screen.dart';
-import 'package:the_fridge/widgets/board.dart';
 import 'package:the_fridge/widgets/boards_list.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -45,17 +44,25 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       body: Center(
-        child: Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.all(10),
-              child: ElevatedButton(
-                onPressed: () {Get.to(const LoginScreen());}, 
-                child: const Text('Login screen'),
-              ),
-            ),
-            const BoardsView()
-          ],
+        child: Container(
+          // constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Get.to(const LoginScreen());
+                    },
+                    child: const Text('Login screen'),
+                  ),
+                ),
+                const BoardsView()
+              ],
+            )
+          )
         )
       )
     );

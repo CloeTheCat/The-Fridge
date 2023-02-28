@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:the_fridge/components/exampleData.dart';
+import 'package:the_fridge/components/example_data.dart';
 import 'package:flutter/material.dart';
 
 GetData() {

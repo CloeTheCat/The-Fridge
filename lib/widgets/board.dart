@@ -12,10 +12,10 @@ class BoardContainer extends StatelessWidget {
       child: Column(
         children: const [
           Center(
-            child: Padding(
-              padding: EdgeInsets.all(10),
-              child: Text('Title'),)
-          ),
+              child: Padding(
+            padding: EdgeInsets.all(10),
+            child: Text('Title'),
+          )),
           Center()
         ],
       ),

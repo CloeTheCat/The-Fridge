@@ -13,7 +13,7 @@ class BoardsView extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(maxWidth: 600),
       margin: const EdgeInsets.only(top: 10, bottom: 10),
-      height: MediaQuery.of(context).size.height * 0.7,
+      height: MediaQuery.of(context).size.height,
       child: boardsList(context),
     );
   }
@@ -21,8 +21,9 @@ class BoardsView extends StatelessWidget {
 
 Widget boardsList(BuildContext context) {
   return ListView.builder(
+    physics: const NeverScrollableScrollPhysics(),
     padding: const EdgeInsets.all(8),
-    itemCount: 4, //boards.length,
+    itemCount: 5, //boards.length,
     itemBuilder: (BuildContext context, int index) {
       return const BoardContainer();
     },
