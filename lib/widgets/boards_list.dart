@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:the_fridge/widgets/board.dart';
+import 'package:the_fridge/components/utils/get_data.dart';
 
 class BoardsView extends StatelessWidget {
   const BoardsView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final data = GetData();
+    print(data);
+
     return Container(
-      height: 160,
+      constraints: const BoxConstraints(maxWidth: 600),
+      margin: const EdgeInsets.only(top: 10, bottom: 10),
+      height: MediaQuery.of(context).size.height * 0.7,
       child: boardsList(context),
     );
   }

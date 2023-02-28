@@ -1,3 +1,4 @@
+const exampleData = """
 {
     "statusCode": 200,
     "data": {
@@ -36,3 +37,4 @@
         ]
     }
 }
+""";

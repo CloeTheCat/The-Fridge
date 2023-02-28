@@ -46,10 +46,14 @@ class HomeScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            ElevatedButton(
-              onPressed: () {Get.to(const LoginScreen());}, 
-              child: const Text('Login screen')
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: ElevatedButton(
+                onPressed: () {Get.to(const LoginScreen());}, 
+                child: const Text('Login screen'),
+              ),
             ),
+            
             const BoardsView()
           ],
         )
