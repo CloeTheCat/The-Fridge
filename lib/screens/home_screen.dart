@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:the_fridge/screens/login_screen.dart';
+import 'package:the_fridge/widgets/board.dart';
 import 'package:the_fridge/widgets/boards_list.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -53,7 +54,6 @@ class HomeScreen extends StatelessWidget {
                 child: const Text('Login screen'),
               ),
             ),
-            
             const BoardsView()
           ],
         )
