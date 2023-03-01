@@ -8,21 +8,24 @@ class BoardsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = GetData();
-    print(data);
+    // print(data);
 
-    return Container(
-      constraints: const BoxConstraints(maxWidth: 600),
-      margin: const EdgeInsets.only(top: 10, bottom: 10),
-      height: MediaQuery.of(context).size.height,
-      child: boardsList(context),
+    return Expanded(
+      child: Container(
+        constraints: const BoxConstraints(maxWidth: 600),
+        margin: const EdgeInsets.only(top: 10),
+        height: MediaQuery.of(context).size.height,
+        child: boardsList(context),
+      ),
     );
   }
 }
 
 Widget boardsList(BuildContext context) {
   return ListView.builder(
-    physics: const NeverScrollableScrollPhysics(),
     padding: const EdgeInsets.all(8),
+    shrinkWrap: true,
+    physics: const ClampingScrollPhysics(),
     itemCount: 5, //boards.length,
     itemBuilder: (BuildContext context, int index) {
       return const BoardContainer();
