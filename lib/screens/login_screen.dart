@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         children: <Widget> [
           const BackFridge(),
           Align(
-            alignment: const Alignment(0,0.5),
+            alignment: const Alignment(0,0),
             child: ElevatedButton(
               onPressed: () {Get.to(const HomeScreen());}, 
               child: const Text('Home screen')
