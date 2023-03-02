@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {Get.to(const LoginScreen());}, 
+          onPressed: () {Get.to( LoginScreen());}, 
           child: const Text('Login screen')
         ),
       )

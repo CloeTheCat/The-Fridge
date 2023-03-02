@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const isLogged = true;
-    
-    return const GetMaterialApp(
+
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       home: isLogged ? HomeScreen() : LoginScreen(),
       // title: "The Fridge",
       // debugShowCheckedModeBanner: false,
