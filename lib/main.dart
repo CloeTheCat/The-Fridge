@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const isLogged = true;
-    
+
     return const GetMaterialApp(
       home: isLogged ? HomeScreen() : LoginScreen(),
       // title: "The Fridge",

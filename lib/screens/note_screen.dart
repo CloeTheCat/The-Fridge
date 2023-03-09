@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:the_fridge/screens/home_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class NoteScreen extends StatelessWidget {
+  const NoteScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
