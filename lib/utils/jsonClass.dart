@@ -6,10 +6,10 @@ class JsonClass {
 
   factory JsonClass.fromJson(Map<String, dynamic> json) {
     return JsonClass(
-      statusCode: json['statusCode'], 
-      data: Data.fromJson(json['data'])
-    );
+        statusCode: json['statusCode'], data: Data.fromJson(json['data']));
   }
+
+  Data? getJsonClass() => data;
 }
 
 class Data {
@@ -20,9 +20,10 @@ class Data {
 
   factory Data.fromJson(Map<String, dynamic> json) {
     return Data(
-      userData: UserData.fromJson(json['userData']),
-      boards: (json['boards'] as List<dynamic>?)?.map((e) => Boards.fromJson(e as Map<String, dynamic>)).toList()
-    );
+        userData: UserData.fromJson(json['userData']),
+        boards: (json['boards'] as List<dynamic>?)
+            ?.map((e) => Boards.fromJson(e as Map<String, dynamic>))
+            .toList());
   }
 }
 
@@ -32,9 +33,7 @@ class UserData {
   UserData({this.name});
 
   factory UserData.fromJson(Map<String, dynamic> json) {
-    return UserData(
-      name: json['name']
-    );
+    return UserData(name: json['name']);
   }
 }
 
@@ -47,10 +46,11 @@ class Boards {
 
   factory Boards.fromJson(Map<String, dynamic> json) {
     return Boards(
-      name: json['name'],
-      private: json['private'],
-      notes: (json['notes'] as List<dynamic>?)?.map((e) => Notes.fromJson(e as Map<String, dynamic>)).toList()
-    );
+        name: json['name'],
+        private: json['private'],
+        notes: (json['notes'] as List<dynamic>?)
+            ?.map((e) => Notes.fromJson(e as Map<String, dynamic>))
+            .toList());
   }
 }
 
@@ -61,9 +61,6 @@ class Notes {
   Notes({this.title, this.content});
 
   factory Notes.fromJson(Map<String, dynamic> json) {
-    return Notes(
-      title: json["title"],
-      content: json['content']
-    );
+    return Notes(title: json["title"], content: json['content']);
   }
 }
